@@ -1,0 +1,152 @@
+
+
+.wrapper {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  border: 2px solid #ddd;
+  border-radius: 12px;
+  background-color: #f9f9f9;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+#Enable-Multi-Selection {
+  margin-right: 8px;
+}
+
+.accordian {
+  margin-top: 20px;
+}
+
+.item {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  background-color: #fff;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 18px;
+  background-color: #f0f0f0;
+  cursor: pointer;
+  font-weight: bold;
+  color: #333;
+}
+
+.title:hover {
+  background-color: #e0e0e0;
+}
+
+.title span {
+  font-size: 24px;
+  color: #007acc;
+  transition: transform 0.2s ease-in-out;
+}
+
+.content {
+  padding: 16px 18px;
+  background-color: #fafafa;
+  color: #444;
+  font-size: 15px;
+  line-height: 1.5;
+  animation: fadeIn 0.3s ease-in-out;
+}
+/* Toggle Switch Styling */
+.toggle {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 10px;
+  justify-content: center;
+}
+
+.toggle-label {
+  font-size: 16px;
+  color: #333;
+  font-weight: 500;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 48px;
+  height: 24px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 24px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+.switch input:checked + .slider {
+  background-color: #007acc;
+}
+
+.switch input:checked + .slider:before {
+  transform: translateX(24px);
+}
+
+
+/* Smooth fade-in animation for content */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .wrapper {
+    padding: 10px;
+  }
+
+  .title {
+    padding: 12px;
+  }
+
+  .content {
+    padding: 12px;
+  }
+}
