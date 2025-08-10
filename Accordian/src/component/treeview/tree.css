@@ -1,0 +1,56 @@
+.tree-view-container {
+  padding: 1rem;
+  font-family: Arial, sans-serif;
+  max-width: 400px;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 1rem;
+  margin: 0;
+}
+
+li {
+  margin: 0.5rem 0;
+}
+
+li > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f2f2f2;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+li > div:hover {
+  background-color: #e0e0e0;
+}
+
+li p {
+  margin: 0;
+  font-weight: 500;
+}
+
+li button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.2s ease;
+}
+
+li button:hover {
+  background-color: #0056b3;
+}
+
+ul ul {
+  padding-left: 1.5rem;
+  border-left: 2px dashed #ccc;
+  margin-top: 0.5rem;
+}
